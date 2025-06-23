@@ -13,10 +13,15 @@
 </head>
 <body>
 <div class="container">
+
     <div class="row">
         <div class="col-sm-12">
             <h1>Laravel page</h1>
         </div>
+
+        <a href="{{ url('/internal-events/create') }}" class="btn btn-primary" style="width: 200px; margin: 20px">
+            Dodaj nowe wydarzenie
+        </a>
     </div>
 </div>
 <hr>

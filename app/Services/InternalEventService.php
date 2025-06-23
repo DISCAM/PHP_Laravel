@@ -42,8 +42,16 @@ class InternalEventService
 
     public function addToDB(Request $request)
     {
-        $internalEvent = new InternalEvent();
+        $request -> validate([
+            'Title' => ['required'],
+            'Link' => ['required'],
+            'EventDateTime' => ['required'],
+            'PublishDateTime' => ['required'],
+            'ContentHTML' => ['required'],
+            'ShortDescription' => ['required']
+        ]);
 
+        $internalEvent = new InternalEvent();
         $internalEvent->Title = $request->input('Title');
         $internalEvent->Link = $request->input('Link');
         $internalEvent->IsPublic = $request->input('IsPublic') == 'on';

@@ -22,25 +22,25 @@
         </div>
     </div>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    <script>
-        function deleteModel(){
-            console.log(this.dataset.eventId);
-            $.ajax({
-               url:'/internal-events/delete/'+this.dataset.eventId,
-                method:'DELETE',
-                data:{
-                   _token:'{{ csrf_token() }}'
+{{--    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>--}}
+{{--    <script>--}}
+{{--        function deleteModel(){--}}
+{{--            console.log(this.dataset.eventId);--}}
+{{--            $.ajax({--}}
+{{--               url:'/internal-events/delete/'+this.dataset.eventId,--}}
+{{--                method:'DELETE',--}}
+{{--                data:{--}}
+{{--                   _token:'{{ csrf_token() }}'--}}
 
 
-                },
-                success:function(){
-                   console.log(this);
-                   document.getElementById('event-' + button.dataset.eventId).remove();
-                }
-            });
-        }
-        $('.delete').on('click', deleteModel);
-    </script>
+{{--                },--}}
+{{--                success:function(){--}}
+{{--                   console.log(this);--}}
+{{--                   document.getElementById('event-' + button.dataset.eventId).remove();--}}
+{{--                }--}}
+{{--            });--}}
+{{--        }--}}
+{{--        $('.delete').on('click', deleteModel);--}}
+{{--    </script>--}}
 
 @endsection
